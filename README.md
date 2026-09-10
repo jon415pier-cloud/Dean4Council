@@ -2,10 +2,14 @@
 
 Campaign site for [dean4council.com](https://www.dean4council.com).
 
-## Pages
+## Versions
 
-- `index.html` — home
-- `issues.html` — where Dean stands
+- `/` — Goldsmith-style (current leading version)
+  - `index.html`
+  - `issues.html`
+- `/alt-editorial/` — earlier Fraunces / Public Sans design
+  - `alt-editorial/index.html`
+  - `alt-editorial/issues.html`
 
 ## Preview on GitHub Pages
 
@@ -14,4 +18,7 @@ In the repo: **Settings → Pages → Build and deployment**
 - Source: **Deploy from a branch**
 - Branch: `main` / `/ (root)`
 
-The site will publish at `https://jon415pier-cloud.github.io/Dean4Council/`.
+Then compare:
+
+- https://jon415pier-cloud.github.io/Dean4Council/
+- https://jon415pier-cloud.github.io/Dean4Council/alt-editorial/

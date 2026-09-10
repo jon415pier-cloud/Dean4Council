@@ -47,10 +47,11 @@
   .btn{display:inline-block; padding:13px 26px; border-radius:999px; font-family:'Outfit', sans-serif; font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; border:1.5px solid transparent;}
   .btn-primary{background:var(--gold); color:#fff;}
   .btn-ghost{border-color:var(--navy); color:var(--navy);}
-  .story{padding:64px 0 72px;}
-  .story-grid{display:grid; grid-template-columns:0.9fr 1.35fr; gap:36px 40px; width:min(1280px, calc(100% - 48px)); max-width:none; margin:0 auto; align-items:start;}
-  .story-points{display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; margin-bottom:18px;}
-  .story-points span{font-family:'Outfit', sans-serif; font-size:18px; font-weight:700; color:var(--navy); line-height:1.25;}
+  .hero-points{display:flex; align-items:center; justify-content:center; flex-wrap:wrap; width:min(1280px, calc(100% - 48px)); margin:0 auto; padding:22px 0 8px; font-family:'Outfit', sans-serif; font-size:16px; font-weight:700; color:var(--navy);}
+  .hero-points span{padding:0 22px; border-left:1px solid rgba(11,120,208,0.28);}
+  .hero-points span:first-child{border-left:0;}
+  .story{padding:28px 0 72px;}
+  .story-grid{display:grid; grid-template-columns:0.85fr 1.4fr; gap:28px 48px; width:min(1280px, calc(100% - 48px)); max-width:none; margin:0 auto; align-items:start;}
   .story-video{background:#111; line-height:0;}
   .story-video video{width:100%; height:auto; aspect-ratio:16 / 10; object-fit:cover; display:block;}
   .story p{margin:0 0 16px; color:#2b3843;}
@@ -96,6 +97,8 @@
     .hero-photo{position:relative; width:100%; height:420px;}
     .hero-photo::before{background:linear-gradient(180deg, rgba(110,183,220,0) 40%, rgba(110,183,220,0.55) 72%, #6EB7DC 100%);}
     .hero-copy{width:100%; padding:36px 24px;}
+    .hero-points{width:calc(100% - 32px); font-size:14px; padding:18px 0 4px;}
+    .hero-points span{padding:6px 14px;}
     .story-grid, .record-cols, .endorse-grid, .footer-grid{grid-template-columns:1fr;}
     .story-grid{width:calc(100% - 32px);}
     .priority{grid-template-columns:48px 1fr;}
@@ -138,20 +141,18 @@
     <h1>Experienced.<br>Independent.<br><span class="accent">Community Minded.</span></h1>
   </div>
 </section>
+<div class="hero-points">
+  <span>Experienced leadership</span>
+  <span>Proven Track Record</span>
+  <span>Commitment to Public Service</span>
+  <span>Independent Voice</span>
+</div>
 <section class="story">
   <div class="story-grid">
-    <div class="story-lead">
-      <div class="story-points">
-        <span>Experienced leadership</span>
-        <span>Commitment to Public Service</span>
-        <span>Proven Track Record</span>
-        <span>Independent Voice</span>
-      </div>
-      <div class="story-video">
-        <video controls playsinline preload="metadata" aria-label="Dean Francois campaign video">
-          <source src="https://video.wixstatic.com/video/d5c3fe_e33a113ea93b4ce8abd051227653e0f5/1080p/mp4/file.mp4" type="video/mp4">
-        </video>
-      </div>
+    <div class="story-video">
+      <video controls playsinline preload="metadata" aria-label="Dean Francois campaign video">
+        <source src="https://video.wixstatic.com/video/d5c3fe_e33a113ea93b4ce8abd051227653e0f5/1080p/mp4/file.mp4" type="video/mp4">
+      </video>
     </div>
     <div>
       <p>I’ve served on the Hermosa Beach City Council for four years, and it’s been an honor to represent the best little beach city in the world.</p>

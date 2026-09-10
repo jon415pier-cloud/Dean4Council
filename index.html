@@ -43,8 +43,8 @@
   .btn-donate:hover{background:var(--navy); color:#fff;}
   .menu-btn{display:none; background:none; border:0; padding:8px; cursor:pointer;}
   .menu-btn span{display:block; width:22px; height:2px; background:var(--navy); margin:5px 0;}
-  .hero{position:relative; min-height:78vh; display:flex; align-items:center; color:#fff; overflow:hidden; background:#1a2a38;}
-  .hero img.bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:68% center;}
+  .hero{position:relative; min-height:clamp(520px, 70vh, 740px); display:flex; align-items:center; color:#fff; overflow:hidden; background:#1a2a38;}
+  .hero img.bg{position:absolute; top:0; bottom:0; left:50%; width:100%; max-width:1440px; height:100%; transform:translateX(-50%); object-fit:cover; object-position:68% 18%;}
   .hero::after{content:''; position:absolute; inset:0; background:linear-gradient(90deg, rgba(15,30,48,0.72) 0%, rgba(15,30,48,0.28) 48%, rgba(15,30,48,0.08) 100%);}
   .hero-copy{position:relative; z-index:1; padding:72px 28px; max-width:1280px; margin:0 auto; width:100%;}
   .hero h1{color:#fff; font-size:clamp(52px, 8vw, 92px); font-weight:800; line-height:0.92; letter-spacing:-0.03em;}
@@ -97,8 +97,8 @@
     .nav-left.open{display:flex; flex-direction:column; gap:14px; position:absolute; top:100%; left:0; right:0; background:var(--cream); padding:18px 24px 22px; border-bottom:1px solid var(--line);}
     .menu-btn{display:block;}
     .brand .name{font-size:22px;}
-    .hero{min-height:70vh;}
-    .hero img.bg{object-position:center top;}
+    .hero{min-height:560px;}
+    .hero img.bg{max-width:none; object-position:center 12%;}
     .hero::after{background:linear-gradient(180deg, rgba(15,30,48,0.15) 20%, rgba(15,30,48,0.78) 100%);}
     .hero-copy{align-self:flex-end; padding:48px 22px 40px;}
     .story-grid, .record-cols, .endorse-grid, .footer-grid{grid-template-columns:1fr;}

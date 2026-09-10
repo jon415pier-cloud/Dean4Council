@@ -48,10 +48,10 @@
   .btn-primary{background:var(--gold); color:#fff;}
   .btn-ghost{border-color:var(--navy); color:var(--navy);}
   .story{padding:64px 0 72px;}
-  .story-grid{display:grid; grid-template-columns:0.85fr 1.4fr; gap:48px; max-width:900px; margin:0 auto; align-items:start;}
-  .story h3{font-size:28px; margin-bottom:20px;}
-  .story-video{background:#0B4A73; line-height:0;}
-  .story-video video{width:100%; height:auto; display:block; max-height:280px; object-fit:cover;}
+  .story-grid{display:grid; grid-template-columns:0.85fr 1.4fr; gap:28px 48px; width:min(1280px, calc(100% - 48px)); max-width:none; margin:0 auto; align-items:start;}
+  .story h3{font-size:28px;}
+  .story-video{grid-column:1 / -1; background:#0B4A73; line-height:0;}
+  .story-video video{width:100%; height:auto; display:block;}
   .story p{margin:0 0 16px; color:#2b3843;}
   .story p:last-child{margin-bottom:0;}
   .priorities{background:var(--navy); padding:72px 0 80px;}
@@ -96,6 +96,7 @@
     .hero-photo::before{background:linear-gradient(180deg, rgba(110,183,220,0) 40%, rgba(110,183,220,0.55) 72%, #6EB7DC 100%);}
     .hero-copy{width:100%; padding:36px 24px;}
     .story-grid, .record-cols, .endorse-grid, .footer-grid{grid-template-columns:1fr;}
+    .story-grid{width:calc(100% - 32px);}
     .priority{grid-template-columns:48px 1fr;}
   }
 </style>
@@ -137,20 +138,18 @@
   </div>
 </section>
 <section class="story">
-  <div class="wrap story-grid">
-    <div class="story-lead">
-      <h3>This town raised me. I want to keep it worth staying in.</h3>
-      <div class="story-video">
-        <video controls playsinline preload="metadata" aria-label="Dean Francois campaign video">
-          <source src="https://video.wixstatic.com/video/d5c3fe_e33a113ea93b4ce8abd051227653e0f5/1080p/mp4/file.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
+  <div class="story-grid">
+    <h3>This town raised me. I want to keep it worth staying in.</h3>
     <div>
       <p>I’ve served on the Hermosa Beach City Council for four years, and it’s been an honor to represent the best little beach city in the world.</p>
       <p>I ran because I love this town — its beach culture, its small-town atmosphere, and its people. I’m engaged in that culture every day, and I believe it matters to have a council member who is truly part of it.</p>
       <p>Over the last four years I’ve focused on protecting what makes Hermosa special, cutting red tape so businesses can thrive, and making sure residents feel good about calling Hermosa home. I’ve also experienced firsthand the public safety and traffic challenges facing our community — it’s an issue that’s dear to my heart, and I’m committed to improving safety for residents, businesses, and visitors.</p>
       <p>As we enter a period of tighter budgets, we have to be more fiscally accountable than ever. I’ll keep pushing for greater transparency and fiscal discipline at City Hall, so every dollar is spent wisely and every voice is heard.</p>
+    </div>
+    <div class="story-video">
+      <video controls playsinline preload="metadata" aria-label="Dean Francois campaign video">
+        <source src="https://video.wixstatic.com/video/d5c3fe_e33a113ea93b4ce8abd051227653e0f5/1080p/mp4/file.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>

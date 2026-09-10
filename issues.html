@@ -9,30 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FFFFFF;
-    --cream-deep:#F2F7FC;
-    --navy:#0B78D0;
-    --navy-deep:#0866B5;
-    --gold:#F02000;
-    --gold-deep:#D91B00;
-    --ink:#122033;
-    --muted:#3E5163;
-    --line:rgba(11,120,208,0.16);
-    --max:820px;
+    --cream:#FFFFFF; --cream-deep:#F2F7FC; --navy:#0B78D0; --navy-deep:#0866B5;
+    --gold:#F02000; --gold-deep:#D91B00; --ink:#122033; --muted:#3E5163;
+    --line:rgba(11,120,208,0.16); --max:820px;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
   body{margin:0; background:var(--cream); color:var(--ink); font-family:'Source Sans 3', sans-serif; font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;}
   h1,h2,h3{font-family:'Outfit', sans-serif; font-weight:700; line-height:1.1; margin:0; letter-spacing:-0.02em; color:var(--navy);}
-  a{color:inherit;}
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  a{color:inherit;} .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
   header{position:sticky; top:0; z-index:50; background:var(--cream); border-bottom:1px solid var(--line);}
   .nav{display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:16px; padding:14px 28px; max-width:1280px; margin:0 auto;}
-  .nav-left{display:flex; gap:28px; align-items:flex-start; font-size:14px; font-weight:600; color:var(--navy);}
-  .nav-left a{text-decoration:none; opacity:0.82;}
-  .nav-left a:hover, .nav-left a.active{opacity:1;}
-  .nav-pair{display:flex; flex-direction:column; gap:2px; line-height:1.25;}
-  .nav-pair .sub{font-weight:500; opacity:0.7;}
+  .nav-left{display:flex; gap:28px; align-items:center; font-size:14px; font-weight:600; color:var(--navy);}
+  .nav-left a{text-decoration:none; opacity:0.82;} .nav-left a:hover, .nav-left a.active{opacity:1;}
   .brand{text-align:center; text-decoration:none; color:var(--navy); font-family:'Outfit', sans-serif;}
   .brand .name{display:block; font-size:28px; font-weight:800; letter-spacing:0.06em; line-height:1;}
   .brand .office{display:inline-block; margin-top:6px; background:var(--gold); color:#fff; font-size:12px; font-weight:700; padding:4px 10px; line-height:1.2;}
@@ -49,8 +37,7 @@
   .page-head p{font-size:19px; color:var(--muted); max-width:52ch; margin-top:16px;}
   .issue{padding:36px 0; border-top:1px solid var(--line);}
   .issue .cat{font-family:'Outfit',sans-serif; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; font-size:13px; color:var(--gold-deep); margin-bottom:8px;}
-  .issue h2{font-size:30px; margin-bottom:14px;}
-  .issue p{color:#2b3843; margin:0 0 16px;}
+  .issue h2{font-size:30px; margin-bottom:14px;} .issue p{color:#2b3843; margin:0 0 16px;}
   .plan{font-weight:700; color:var(--navy); margin:20px 0 12px;}
   .issue ul{margin:0; padding:0; list-style:none;}
   .issue li{padding:10px 0 10px 18px; position:relative; border-top:1px solid var(--line); color:#2b3843;}
@@ -60,41 +47,30 @@
   .cta-inner{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; max-width:1120px; margin:0 auto; padding:0 28px;}
   .cta-inner h3{color:#fff; font-size:26px; max-width:20ch;}
   .btn{display:inline-block; padding:13px 26px; border-radius:999px; font-family:'Outfit',sans-serif; font-weight:700; font-size:14px; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; border:1.5px solid transparent;}
-  .btn-primary{background:var(--gold); color:#fff;}
-  .btn-ghost{border-color:#fff; color:#fff;}
+  .btn-primary{background:var(--gold); color:#fff;} .btn-ghost{border-color:#fff; color:#fff;}
   footer{background:var(--cream-deep); padding:28px 0; font-size:13.5px; color:#6b7883; text-align:center;}
   @media (max-width:900px){
     .nav{grid-template-columns:auto 1fr auto; padding:12px 18px;}
     .nav-left{display:none;}
     .nav-left.open{display:flex; flex-direction:column; gap:14px; position:absolute; top:100%; left:0; right:0; background:var(--cream); padding:18px 24px 22px; border-bottom:1px solid var(--line);}
-    .menu-btn{display:block;}
-    .brand .name{font-size:22px;}
+    .menu-btn{display:block;} .brand .name{font-size:22px;}
   }
 </style>
 </head>
 <body>
 <header>
   <nav class="nav">
-    <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLeft').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLeft').classList.toggle('open')"><span></span><span></span><span></span></button>
     <div class="nav-left" id="navLeft">
-      <div class="nav-pair">
-        <a href="index.html">Home</a>
-        <a href="issues.html" class="sub active">Issues</a>
-      </div>
+      <a href="index.html">Home</a>
+      <a href="issues.html" class="active">Issues</a>
       <a href="index.html#record">Involvement</a>
       <a href="index.html#endorsements">Endorsements</a>
       <a href="index.html#contact">Contact</a>
     </div>
-    <a class="brand" href="index.html">
-      <span class="name">FRANCOIS</span>
-      <span class="office">Hermosa Beach City Council</span>
-    </a>
+    <a class="brand" href="index.html"><span class="name">FRANCOIS</span><span class="office">Hermosa Beach City Council</span></a>
     <div class="nav-right">
-      <a class="icon-btn" href="https://www.facebook.com/DeanforHermosaBeachCityCouncil/" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.6.4-1 1-1z"/></svg>
-      </a>
+      <a class="icon-btn" href="https://www.facebook.com/DeanforHermosaBeachCityCouncil/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.6.4-1 1-1z"/></svg></a>
       <a class="btn-donate" href="https://www.dean4council.com/donate" target="_blank" rel="noopener">Donate</a>
     </div>
   </nav>
